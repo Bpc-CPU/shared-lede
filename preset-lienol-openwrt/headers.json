@@ -21,7 +21,7 @@
   "xiaomi-3-pro": ["2", "ramips", "mt7621", "xiaomi_mi-router-3-pro"],
   "xiaomi-4": ["2", "ramips", "mt7621", "xiaomi_mi-router-4"],
   "xiaomi-4a-gigabit": ["1", "ramips", "mt7621", "xiaomi_mi-router-4a-gigabit"],
-  "xiaomi-4a-gigabit-v2": ["1", "ramips", "mt7621", "xiaomi_mi-router-4a-gigabit-v2"],
+  "xiaomi-4a-gigabit-v2": ["3", "ramips", "mt7621", "xiaomi_mi-router-4a-gigabit-v2"],
   "xiaomi-ac2100": ["2", "ramips", "mt7621", "xiaomi_mi-router-ac2100"],
   "xiaomi-cr6606": ["2", "ramips", "mt7621", "xiaomi_mi-router-cr6606"],
   "xiaomi-cr6608": ["2", "ramips", "mt7621", "xiaomi_mi-router-cr6608"],
