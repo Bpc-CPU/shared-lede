@@ -263,6 +263,8 @@ Actions流程顺利完成后，去release(或者artifact)下载你的固件，re
 
 ## 最后
 
+感谢[jlumbroso/free-disk-space](https://github.com/jlumbroso/free-disk-space)提供的Github Action空间清理
+
 无特别详细的教程，自己摸索吧。
 
 如有问题，请利用庞大的网络知识库，能快速解决你的问题。
