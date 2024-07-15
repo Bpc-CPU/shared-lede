@@ -18,3 +18,4 @@ jobs:
         with:
           save_period: ${{ inputs.period}}
           save_min_runs_number: 0
+      - run: df -hl
