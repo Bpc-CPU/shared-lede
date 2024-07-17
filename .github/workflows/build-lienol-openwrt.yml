@@ -167,7 +167,7 @@ jobs:
 
       - name: Compile
         run: |
-          make -j$(nproc) || make -j1 V=s
+          make -j$(nproc) || make -j1 V=sc
 
       - name: Pick up files
         run: |
