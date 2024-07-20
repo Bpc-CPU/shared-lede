@@ -16,8 +16,8 @@
 #sed -i 's/Xiaomi Mi Router CR6609/Xiaomi CR6609/g' target/linux/ramips/dts/mt7621_xiaomi_mi-router-cr6609.dts
 
 # delete the lower version of xray-core
-rm -rf feeds/packages/net/xray-core
-rm -rf package/feeds/packages/xray-core
+# rm -rf feeds/packages/net/xray-core
+# rm -rf package/feeds/packages/xray-core
 
 # copy smartdns configuration
 #sed -i 's#$(PKG_BUILD_DIR)/package/openwrt/address.conf#$(CURDIR)/files/address.conf#g' feeds/packages/net/smartdns/Makefile
