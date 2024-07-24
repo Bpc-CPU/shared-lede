@@ -11,6 +11,6 @@ jobs:
       - name: Show
         run: |
           gcc --version
-          apt-get update
-          apt-get -y upgrade gcc
+          sudo apt-get update
+          sudo apt-get -y upgrade gcc
           gcc --version
