@@ -19,7 +19,7 @@ jobs:
           sudo apt-get install -y aria2 bzip2
           aria2c https://ftp.gnu.org/gnu/gcc/gcc-13.3.0/gcc-13.3.0.tar.gz -s 24 -x 16
           tar xf gcc-13.3.0.tar.gz
-          cd gcc-13.1.0/
+          cd gcc-13.3.0/
           ./contrib/download_prerequisites
           mkdir build && cd build
           ../configure -enable-checking=release -enable-languages=c,c++ -disable-multilib
