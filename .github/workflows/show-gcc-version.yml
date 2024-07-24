@@ -1,0 +1,12 @@
+name: show gcc version
+
+on:
+  workflow_dispatch:
+jobs:
+  to-build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Show
+        run: gcc --version
