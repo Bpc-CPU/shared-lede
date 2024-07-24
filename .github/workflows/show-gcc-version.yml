@@ -9,4 +9,8 @@ jobs:
     steps:
 
       - name: Show
-        run: gcc --version
+        run: |
+          gcc --version
+          apt-get update
+          apt-get -y upgrade gcc
+          gcc --version
