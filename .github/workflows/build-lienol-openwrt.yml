@@ -107,6 +107,32 @@ jobs:
         run: |
           df -h
 
+      - name: Show
+        run: |
+          gcc --version
+          sudo apt-get update
+          sudo apt-get -y upgrade gcc
+          gcc --version
+          
+      - name: Install gcc 13
+        run: |
+          sudo apt-get install -y aria2 bzip2
+          aria2c https://ftp.gnu.org/gnu/gcc/gcc-13.3.0/gcc-13.3.0.tar.gz -s 24 -x 16
+          tar xf gcc-13.3.0.tar.gz
+          rm -f gcc-13.3.0.tar.gz
+          cd gcc-13.3.0/
+          ./contrib/download_prerequisites
+          mkdir build && cd build
+          ../configure -enable-checking=release -enable-languages=c,c++ -disable-multilib
+          sudo make -j8
+          sudo make install
+          cd ../..
+          rm -rf gcc-13.3.0
+          
+      - name: Show
+        run: |
+          gcc --version
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
