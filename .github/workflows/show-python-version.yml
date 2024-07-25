@@ -1,0 +1,21 @@
+name: show python version
+
+on:
+  workflow_dispatch:
+jobs:
+  to-build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Show
+        run: |
+          python --version
+          sudo apt-get update
+          sudo apt-get -y upgrade python
+          python --version
+      - name: Show a file
+        run: |
+          sudo cat /usr/lib/python3.10/subprocess.py
+          sudo cat /usr/lib/python3.12.4/subprocess.py
+          sudo cat /usr/lib/python3.12/subprocess.py
