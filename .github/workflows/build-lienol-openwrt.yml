@@ -305,7 +305,7 @@ jobs:
         with:
           file: _collected_firmware/*
           tag: ${{ steps.calculate-version.outputs.version }}
-          release_name: ${{ steps.calculate-version.outputs.version }} ${{ steps.generate-summary.outputs.stitle }}
+          release_name: ${{ steps.calculate-version.outputs.version }} lienol-${{ steps.generate-summary.outputs.stitle }}
           overwrite: true
           prerelease: false
           body: |
