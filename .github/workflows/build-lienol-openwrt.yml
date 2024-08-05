@@ -135,13 +135,49 @@ jobs:
 #          sudo useradd wlight -p $1$p1y180HJ$0rABdJs13H6otyNngenLp0
 #          sudo sh -c 'echo "wlight ALL=(ALL) ALL" >> /etc/sudoers'
 
-      - name: Show
+      - name: Display gcc version
         run: |
           gcc --version
           sudo apt-get update
           sudo apt-get install -y aria2
           sudo apt-get -y upgrade gcc
           gcc --version
+
+      - name: Display golang version
+        run: |
+          go version
+      - name: Update golang version to 1.22.5
+        run: |
+          aria2c https://go.dev/dl/go1.22.5.linux-amd64.tar.gz -o ./go1.22.5.linux-amd64.tar.gz
+          mkdir go
+          sudo tar -C ./go/ -xzf go1.22.5.linux-amd64.tar.gz
+          ls ./go
+          sudo rm -rf /usr/local/go
+          echo ---
+          ls /usr/local/
+          echo ---
+          sudo rm -f /usr/bin/go
+          ls /usr/bin/
+          echo ---
+          sudo tar -C /usr/local/ -xzf go1.22.5.linux-amd64.tar.gz
+      - name: Edit the environment
+        run: |
+          echo $PATH
+          if [ -d "/usr/local/go/bin" ] ; then
+            PATH="/usr/local/go/bin:$PATH"
+          fi
+          export PATH=$PATH
+          echo $PATH
+      - name: Display where go
+        run: |
+          whereis go
+      - name: Create golang link
+        run: |
+          sudo ln -s /usr/local/go/bin/go /usr/bin/go
+      - name: Display golang version again
+        run: |
+          /usr/local/go/bin/go version
+          go version
           
 #      - name: Install gcc 13
 #        run: |
@@ -158,7 +194,7 @@ jobs:
 #          cd ../..
 #          sudo rm -rf gcc-13.3.0
           
-      - name: Show
+      - name: Show gcc version
         run: |
           gcc --version
 
