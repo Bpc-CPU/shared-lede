@@ -1,0 +1,19 @@
+name: display golang version and update golang
+on: push
+jobs:
+  to-build:
+    name: Display golang version and update golang
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display
+        run: |
+          go version
+      - name: Update
+        run: |
+          sudo apt-get install -y aria2
+          aria2c https://go.dev/dl/go1.22.5.linux-amd64.tar.gz -o ./
+          rm -rf /usr/local/go
+          sudo tar -C /usr/local/ -xzf go1.22.5.linux-amd64.tar.gz
+      - name: Display again
+        run: |
+          go version
