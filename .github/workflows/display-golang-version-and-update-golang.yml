@@ -25,7 +25,7 @@ jobs:
           echo $PATH
       - name: Where go
         run: |
-          where go
+          whereis go
       - name: Display again
         run: |
           /usr/local/go/bin/go version
