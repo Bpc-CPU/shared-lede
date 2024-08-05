@@ -19,7 +19,7 @@ git clone --depth 1 https://github.com/maxlicheng/luci-app-unblockmusic.git
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages.git pw-dependencies
 
 # change v2ray-plugin
-aria2c https://github.com/honwen/openwrt-v2ray-plugin/raw/master/Makefile -o ./pw-dependencies/v2ray-plugin/Makefile
+# aria2c https://github.com/honwen/openwrt-v2ray-plugin/raw/master/Makefile -o ./pw-dependencies/v2ray-plugin/Makefile
 
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall.git && mv openwrt-passwall/luci-app-passwall ./ && rm -rf openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git && mv openwrt-passwall2/luci-app-passwall2 ./ && rm -rf openwrt-passwall2
