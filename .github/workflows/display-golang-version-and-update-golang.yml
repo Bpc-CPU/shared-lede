@@ -12,7 +12,7 @@ jobs:
       - name: Update
         run: |
           sudo apt-get install -y aria2
-          aria2c https://go.dev/dl/go1.22.5.linux-amd64.tar.gz -o ./
+          aria2c https://go.dev/dl/go1.22.5.linux-amd64.tar.gz -o ./go1.22.5.linux-amd64.tar.gz
           rm -rf /usr/local/go
           sudo tar -C /usr/local/ -xzf go1.22.5.linux-amd64.tar.gz
       - name: Display again
