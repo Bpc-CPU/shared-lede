@@ -23,6 +23,9 @@ jobs:
           fi
           export PATH=$PATH
           echo $PATH
+      - name: Where go
+        run: |
+          where go
       - name: Display again
         run: |
           /usr/local/go/bin/go version
