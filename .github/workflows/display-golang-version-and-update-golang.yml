@@ -12,6 +12,9 @@ jobs:
       - name: Update
         run: |
           aria2c https://go.dev/dl/go1.22.5.linux-amd64.tar.gz -o ./go1.22.5.linux-amd64.tar.gz
+          mkdir go
+          sudo tar -C ./go/ -xzf go1.22.5.linux-amd64.tar.gz
+          ls ./go
           sudo rm -rf /usr/local/go
           echo ---
           ls /usr/local/
