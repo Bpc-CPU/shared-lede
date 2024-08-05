@@ -26,5 +26,4 @@ git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git && mv ope
 git clone --depth 1 https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash ./ && rm -rf OpenClash
 
 # download more codes
-git clone --depth 1 https://github.com/kuoruan/openwrt-upx.git
-git clone --depth 1 https://github.com/Netgear/wsdd2.git 
+git clone --depth 1 https://github.com/sbwml/openwrt_helloworld.git temp && mv ./temp/chinadns-ng ./ && rm -rf temp
