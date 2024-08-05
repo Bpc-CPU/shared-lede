@@ -167,6 +167,11 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
+      - name: Update golang version
+        run: |
+          rm -rf feeds/packages/lang/golang
+          git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+
       - name: Modify configuration
         env:
           MODIFY_SH: ${{ steps.prepare-deployment.outputs.modify_sh }}
