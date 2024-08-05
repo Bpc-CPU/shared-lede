@@ -21,7 +21,9 @@ jobs:
           if [ -d "/usr/local/go/bin" ] ; then
             PATH="/usr/local/go/bin:$PATH"
           fi
+          export PATH=$PATH
           echo $PATH
       - name: Display again
         run: |
+          /usr/local/go/bin/go version
           go version
