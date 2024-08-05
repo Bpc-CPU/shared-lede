@@ -27,3 +27,5 @@ git clone --depth 1 https://github.com/vernesong/OpenClash.git && mv OpenClash/l
 
 # download more codes
 git clone --depth 1 https://github.com/sbwml/openwrt_helloworld.git temp && mv ./temp/chinadns-ng ./ && rm -rf temp
+git clone --depth 1 https://github.com/immortalwrt/luci.git temp && mv ./temp/applications/luci-app-appfilter ./ && rm -rf temp
+git clone --depth 1 https://github.com/destan19/OpenAppFilter.git
