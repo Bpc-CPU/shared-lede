@@ -34,6 +34,9 @@ jobs:
       - name: Where go
         run: |
           whereis go
+      - name: Create link
+        run: |
+          sudo ln -s /usr/local/go/bin/go /usr/bin/go
       - name: Display again
         run: |
           /usr/local/go/bin/go version
