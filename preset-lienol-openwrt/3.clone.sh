@@ -14,7 +14,8 @@ mkdir $SUPPLY_DIR && cd $SUPPLY_DIR
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon.git
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config.git
 git clone --depth 1 https://github.com/Ausaci/luci-app-nat6-helper.git
-git clone --depth 1 https://github.com/maxlicheng/luci-app-unblockmusic.git
+git clone --depth 1 https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git
+# [Deprecated+Useless] git clone --depth 1 https://github.com/maxlicheng/luci-app-unblockmusic.git
 # && mv luci-app-unblockmusic/app/ ./luci-app-unblockmusic && mv luci-app-unblockmusic/UnblockNeteaseMusic ./ && mv luci-app-unblockmusic/UnblockNeteaseMusicGo ./ && rm -rf luci-app-unblockmusic
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages.git pw-dependencies
 
